@@ -27,8 +27,14 @@ def test_count_specific_word():
     assert count_specific_word(sample, "banana") == 0
 
 def test_identify_most_common_word():
-    assert identify_most_common_word(sample_text) == "this"  # case-insensitive tie breaker?
+    sample = "Dog cat dog bird cat dog."
+    assert identify_most_common_word(sample) == "dog"
 
+def test_identify_most_common_word_tie():
+    sample = "apple banana banana apple"
+    # Both appear twice — 'apple' comes first in text
+    result = identify_most_common_word(sample)
+    assert result == "apple"
 
 def test_calculate_average_word_length():
     avg = calculate_average_word_length("Hello world!")
