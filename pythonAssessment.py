@@ -8,7 +8,6 @@ from pathlib import Path
 
 # Function to load in and read the data from an input
 def read_text_file(file_path):
-    None
     # Step 1: Ensure file_path is a Path object
     # Use pathlib to handle file system compatibility (cross-platform)
     file_path = Path(file_path)
