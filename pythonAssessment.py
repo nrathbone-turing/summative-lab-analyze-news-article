@@ -22,14 +22,20 @@ def read_text_file(file_path):
 def count_specific_word(text, word):
     None
     # Step 1: Normalize both the text and word to lowercase for case-insensitive comparison
-
+    word = word.lower()
+    
     # Step 2: Use regex to find all word-like sequences (r"\b\w+\b")
     # This filters out punctuation and captures actual words only
-
+    words = re.findall(r"\b\w+\b", text.lower())
+    
     # Step 3: Loop through the list of words
     # Count how many match the given word exactly
-
+    count = 0
+    for w in words:
+        if w == word:
+            count += 1
     # Step 4: Return the count
+    return count
 
 # Function to identify the most common word in the text.
 def identify_most_common_word(text):
