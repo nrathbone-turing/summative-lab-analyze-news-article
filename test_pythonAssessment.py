@@ -60,4 +60,11 @@ def test_count_paragraphs():
     assert count_paragraphs(sample2) == 0
 
 def test_count_sentences():
-    assert count_sentences(sample_text) == 4
+    sample = "This is one. This is two! Is this three? Yes."
+    assert count_sentences(sample) == 4
+
+    sample2 = "Just one sentence"
+    assert count_sentences(sample2) == 1  # no punctuation means it's only one block
+
+    sample3 = ""
+    assert count_sentences(sample3) == 0 # an empty section edge case
