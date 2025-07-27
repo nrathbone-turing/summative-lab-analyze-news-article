@@ -84,14 +84,19 @@ def calculate_average_word_length(text):
 # Function to count the number of paragraphs in the text.
 # define paragraphs based on empty line breaks
 def count_paragraphs(text):
-    None
     # Step 1: Split the text on two consecutive newlines ("\n\n")
     # This creates a list of paragraph blocks
-
+    raw_paragraphs = text.split("\n\n")
+    
     # Step 2: Strip whitespace from each paragraph and filter out empty ones
     # This avoids counting accidental blank lines
+    paragraphs = []
+    for p in raw_paragraphs:
+        if p.strip():  # Only keep non-empty paragraphs
+            paragraphs.append(p)
 
     # Step 3: Return the number of non-empty paragraphs
+    return len(paragraphs)
 
 # Function to count the number of sentences in the text.
 # define sentences based on punctuation marks

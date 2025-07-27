@@ -48,8 +48,16 @@ def test_calculate_average_word_length():
     assert calculate_average_word_length(sample3) == 0.0
 
 def test_count_paragraphs():
-    assert count_paragraphs(sample_text) == 2
+    sample = (
+        "This is paragraph one.\n"
+        "Still paragraph one.\n\n"
+        "This is paragraph two.\n\n"
+        "This is paragraph three."
+    )
+    assert count_paragraphs(sample) == 3
 
+    sample2 = "\n\n\n" # edge case: empty paragraphs
+    assert count_paragraphs(sample2) == 0
 
 def test_count_sentences():
     assert count_sentences(sample_text) == 4
