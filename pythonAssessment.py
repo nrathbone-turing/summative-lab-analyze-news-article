@@ -1,4 +1,8 @@
 import re
+# regex expressions to use
+# r"\b\w+\b" - match all words with no punctuation, use with find_all function from re module
+# r"(?<=[.!?]) +" - match punctuation and used to split sentences, use with split function from re module
+# "\n\n" - not true regex but can be used to split on line break
 from collections import Counter
 from pathlib import Path
 
@@ -12,7 +16,7 @@ def count_specific_word(text, word):
 
 # Function to identify the most common word in the text.
 def identify_most_common_word(text):
-        None
+    None
 
 # Function to calculate the average length of words in the text.
 # exclude punctuation and special characters
