@@ -58,7 +58,6 @@ def identify_most_common_word(text):
 # Function to calculate the average length of words in the text.
 # exclude punctuation and special characters
 def calculate_average_word_length(text):
-    None
     # Step 1: Convert text to lowercase again
     text = text.lower()
     
@@ -85,11 +84,18 @@ def calculate_average_word_length(text):
 # Function to count the number of paragraphs in the text.
 # define paragraphs based on empty line breaks
 def count_paragraphs(text):
-     None
+    None
+    # Step 1: Split the text on two consecutive newlines ("\n\n")
+    # This creates a list of paragraph blocks
+
+    # Step 2: Strip whitespace from each paragraph and filter out empty ones
+    # This avoids counting accidental blank lines
+
+    # Step 3: Return the number of non-empty paragraphs
 
 # Function to count the number of sentences in the text.
 # define sentences based on punctuation marks
 def count_sentences(text):
-     None
+    None
 
 # Main function to display and print results
