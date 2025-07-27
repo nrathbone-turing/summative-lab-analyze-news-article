@@ -115,3 +115,10 @@ def count_sentences(text):
     return sentence_count
 
 # Main function to display and print results
+def main():
+    None
+    # Step 1: Load the article text
+
+    # Step 2: Call all the analysis functions
+
+    # Step 3: Print results
