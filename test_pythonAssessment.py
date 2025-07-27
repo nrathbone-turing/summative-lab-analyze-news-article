@@ -37,9 +37,15 @@ def test_identify_most_common_word_tie():
     assert result == "apple"
 
 def test_calculate_average_word_length():
-    avg = calculate_average_word_length("Hello world!")
-    assert round(avg, 2) == 5.0
+    sample = "Hello world!"
+    assert calculate_average_word_length(sample) == 5.0
 
+    sample2 = "Short longer longest."
+    # lengths: 5 + 6 + 7 = 18 → 18 / 3 = 6.0
+    assert calculate_average_word_length(sample2) == 6.0
+
+    sample3 = ""  # edge case: no words
+    assert calculate_average_word_length(sample3) == 0.0
 
 def test_count_paragraphs():
     assert count_paragraphs(sample_text) == 2

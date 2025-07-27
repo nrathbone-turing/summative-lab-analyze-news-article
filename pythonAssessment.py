@@ -60,17 +60,27 @@ def identify_most_common_word(text):
 def calculate_average_word_length(text):
     None
     # Step 1: Convert text to lowercase again
-
+    text = text.lower()
+    
     # Step 2: Use regex to extract all word-like sequences (r"\b\w+\b")
     # This filters out punctuation and gives a clean list of words
-
+    words = re.findall(r"\b\w+\b", text)
+    
+    # If there are no words at all (edge case validation), return 0.0 to avoid `ZeroDivisionError`
+    if not words:
+        return 0.0
+    
     # Step 3: Calculate the total number of characters across all words
     # Sum the lengths of all words in the list
-
+    total_chars = 0
+    for word in words:
+        total_chars += len(word)
+    
     # Step 4: Divide total characters by number of words to get average
-    # If there are no words at all (edge case validation), return 0.0 to avoid `ZeroDivisionError`
-
+    average = total_chars / len(words)
+    
     # Step 5: Return the average rounded to two decimal places
+    return round(average, 2)
 
 # Function to count the number of paragraphs in the text.
 # define paragraphs based on empty line breaks
