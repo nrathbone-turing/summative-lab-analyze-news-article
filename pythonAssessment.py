@@ -39,6 +39,16 @@ def count_specific_word(text, word):
 # Function to identify the most common word in the text.
 def identify_most_common_word(text):
     None
+    # Step 1: Convert the text to lowercase to ensure case-insensitive counting
+
+    # Step 2: Use regex to extract all word-like sequences (r"\b\w+\b")
+    # This ensures we ignore punctuation and symbols
+
+    # Step 3: Use collections.Counter to count each word's frequency
+
+    # Step 4: Find the word with the highest count using .most_common(1)
+
+    # Step 5: Return that word
 
 # Function to calculate the average length of words in the text.
 # exclude punctuation and special characters
