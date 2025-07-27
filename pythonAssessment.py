@@ -102,5 +102,12 @@ def count_paragraphs(text):
 # define sentences based on punctuation marks
 def count_sentences(text):
     None
+    # Step 1: Use regex split to break the text at punctuation that ends sentences
+    # Pattern: r"(?<=[.!?]) +" to match space(s) that follow a sentence-ending punctuation
+
+    # Step 2: Strip and filter out any blank segments (e.g., extra punctuation at end)
+
+    # Step 3: Return the number of non-empty sentences
+
 
 # Main function to display and print results
