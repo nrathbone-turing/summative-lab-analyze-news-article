@@ -20,7 +20,6 @@ def read_text_file(file_path):
 
 # Function to count the number of times a specific word is used in the text.
 def count_specific_word(text, word):
-    None
     # Step 1: Normalize both the text and word to lowercase for case-insensitive comparison
     word = word.lower()
     
