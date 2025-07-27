@@ -116,9 +116,25 @@ def count_sentences(text):
 
 # Main function to display and print results
 def main():
-    None
     # Step 1: Load the article text
-
+    file_path = Path(__file__).parent / "article.txt" # make path relative to the script itself to address FileNotFoundError
+    text = read_text_file(file_path)
+    
     # Step 2: Call all the analysis functions
+    specific_word = "the"  # based on the intro video, but could also have a user input here
+    word_count = count_specific_word(text, specific_word)
+    most_common = identify_most_common_word(text)
+    avg_word_len = calculate_average_word_length(text)
+    paragraph_count = count_paragraphs(text)
+    sentence_count = count_sentences(text)
 
     # Step 3: Print results
+    print("----- Text Analysis Report -----")
+    print(f"Total uses of the word '{specific_word}': {word_count}")
+    print(f"Most common word: {most_common}")
+    print(f"Average word length: {avg_word_len}")
+    print(f"Number of paragraphs: {paragraph_count}")
+    print(f"Number of sentences: {sentence_count}")
+
+if __name__ == "__main__":
+    main()
