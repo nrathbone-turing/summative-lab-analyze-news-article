@@ -21,6 +21,15 @@ def read_text_file(file_path):
 # Function to count the number of times a specific word is used in the text.
 def count_specific_word(text, word):
     None
+    # Step 1: Normalize both the text and word to lowercase for case-insensitive comparison
+
+    # Step 2: Use regex to find all word-like sequences (r"\b\w+\b")
+    # This filters out punctuation and captures actual words only
+
+    # Step 3: Loop through the list of words
+    # Count how many match the given word exactly
+
+    # Step 4: Return the count
 
 # Function to identify the most common word in the text.
 def identify_most_common_word(text):
