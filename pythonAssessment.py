@@ -11,11 +11,13 @@ def read_text_file(file_path):
     None
     # Step 1: Ensure file_path is a Path object
     # Use pathlib to handle file system compatibility (cross-platform)
-
+    file_path = Path(file_path)
+    
     # Step 2: Read the file contents using .read_text()
     # Assume the encoding is UTF-8 unless specified otherwise
 
     # Step 3: Return the full contents as a single string
+    return file_path.read_text(encoding="utf-8")
 
 # Function to count the number of times a specific word is used in the text.
 def count_specific_word(text, word):
