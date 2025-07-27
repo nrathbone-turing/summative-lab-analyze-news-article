@@ -9,6 +9,13 @@ from pathlib import Path
 # Function to load in and read the data from an input
 def read_text_file(file_path):
     None
+    # Step 1: Ensure file_path is a Path object
+    # Use pathlib to handle file system compatibility (cross-platform)
+
+    # Step 2: Read the file contents using .read_text()
+    # Assume the encoding is UTF-8 unless specified otherwise
+
+    # Step 3: Return the full contents as a single string
 
 # Function to count the number of times a specific word is used in the text.
 def count_specific_word(text, word):
