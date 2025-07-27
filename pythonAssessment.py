@@ -58,7 +58,19 @@ def identify_most_common_word(text):
 # Function to calculate the average length of words in the text.
 # exclude punctuation and special characters
 def calculate_average_word_length(text):
-     None
+    None
+    # Step 1: Convert text to lowercase again
+
+    # Step 2: Use regex to extract all word-like sequences (r"\b\w+\b")
+    # This filters out punctuation and gives a clean list of words
+
+    # Step 3: Calculate the total number of characters across all words
+    # Sum the lengths of all words in the list
+
+    # Step 4: Divide total characters by number of words to get average
+    # If there are no words at all (edge case validation), return 0.0 to avoid `ZeroDivisionError`
+
+    # Step 5: Return the average rounded to two decimal places
 
 # Function to count the number of paragraphs in the text.
 # define paragraphs based on empty line breaks
